@@ -1,0 +1,6 @@
+c:\users\gaggi\documents\visual studio 2015\Projects\Ereditarieta\Ereditarieta\bin\Debug\Ereditarieta.exe.config
+c:\users\gaggi\documents\visual studio 2015\Projects\Ereditarieta\Ereditarieta\bin\Debug\Ereditarieta.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\Ereditarieta\Ereditarieta\bin\Debug\Ereditarieta.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\Ereditarieta\Ereditarieta\obj\Debug\Ereditarieta.csprojResolveAssemblyReference.cache
+c:\users\gaggi\documents\visual studio 2015\Projects\Ereditarieta\Ereditarieta\obj\Debug\Ereditarieta.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\Ereditarieta\Ereditarieta\obj\Debug\Ereditarieta.pdb

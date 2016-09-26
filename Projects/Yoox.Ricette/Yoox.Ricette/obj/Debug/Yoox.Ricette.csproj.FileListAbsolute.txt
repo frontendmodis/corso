@@ -1,0 +1,9 @@
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\bin\Debug\Yoox.Ricette.exe.config
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\bin\Debug\Yoox.Ricette.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\bin\Debug\Yoox.Ricette.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\obj\Debug\Yoox.Ricette.csprojResolveAssemblyReference.cache
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\obj\Debug\Yoox.Ricette.Form1.resources
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\obj\Debug\Yoox.Ricette.Properties.Resources.resources
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\obj\Debug\Yoox.Ricette.csproj.GenerateResource.Cache
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\obj\Debug\Yoox.Ricette.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.Ricette\Yoox.Ricette\obj\Debug\Yoox.Ricette.pdb

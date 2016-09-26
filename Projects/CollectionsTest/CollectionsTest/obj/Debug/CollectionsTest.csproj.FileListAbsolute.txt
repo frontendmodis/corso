@@ -1,0 +1,5 @@
+c:\users\gaggi\documents\visual studio 2015\Projects\CollectionsTest\CollectionsTest\bin\Debug\CollectionsTest.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\CollectionsTest\CollectionsTest\bin\Debug\CollectionsTest.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\CollectionsTest\CollectionsTest\obj\Debug\CollectionsTest.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\CollectionsTest\CollectionsTest\obj\Debug\CollectionsTest.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\CollectionsTest\CollectionsTest\obj\Debug\CollectionsTest.csprojResolveAssemblyReference.cache

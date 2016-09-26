@@ -1,0 +1,12 @@
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\LaNostraRubrica.DAL.dll
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\LaNostraRubrica.DAL.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\obj\Debug\LaNostraRubrica.DAL.csprojResolveAssemblyReference.cache
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\obj\Debug\LaNostraRubrica.DAL.dll
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\obj\Debug\LaNostraRubrica.DAL.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\LaNostraRubrica.DAL.dll.config
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\EntityFramework.dll
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\EntityFramework.xml
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\obj\Debug\LaNostraRubrica.DAL.Migrations.StrutturaIniziale.resources
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\obj\Debug\LaNostraRubrica.DAL.csproj.GenerateResource.Cache

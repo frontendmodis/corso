@@ -1,0 +1,5 @@
+c:\users\gaggi\documents\visual studio 2015\Projects\Questionario\Questionario\bin\Debug\Questionario.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\Questionario\Questionario\bin\Debug\Questionario.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\Questionario\Questionario\obj\Debug\Questionario.csprojResolveAssemblyReference.cache
+c:\users\gaggi\documents\visual studio 2015\Projects\Questionario\Questionario\obj\Debug\Questionario.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\Questionario\Questionario\obj\Debug\Questionario.pdb
