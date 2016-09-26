@@ -14,14 +14,19 @@ namespace Lambda
 
             Console.WriteLine("Inizio lavoro...");
             //lavoro.Fai(new FaccioUnGrossoLavoro.Avanzamento(Scrivo));
-            lavoro.Fai(Scrivo);
+            //lavoro.Fai(Scrivo);
+            lavoro.Fai(delegate (decimal p)
+            {
+                Console.Write("\r{0}%   ", p);
+            });
+
             Console.WriteLine("\n...fine lavoro.");
             Console.ReadLine();
         }
 
-        static void Scrivo(decimal p)
-        {
-            Console.Write("\r{0}%   ", p);
-        }
+        //static void Scrivo(decimal p)
+        //{
+        //    Console.Write("\r{0}%   ", p);
+        //}
     }
 }
