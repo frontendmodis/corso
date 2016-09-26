@@ -8,8 +8,10 @@ namespace Lambda
 {
     public class FaccioUnGrossoLavoro
     {
-        public delegate void Avanzamento(decimal percentuale);
-        public void Fai(Avanzamento log)
+        //public delegate void Avanzamento(decimal percentuale);
+
+        //public void Fai(Avanzamento log)
+        public void Fai(Action<decimal> log)
         {
             for(var i = 0; i < 1000; i++)
             {
