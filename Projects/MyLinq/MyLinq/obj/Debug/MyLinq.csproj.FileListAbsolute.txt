@@ -1,1 +1,6 @@
 c:\users\gaggi\documents\visual studio 2015\Projects\MyLinq\MyLinq\bin\Debug\MyLinq.exe.config
+c:\users\gaggi\documents\visual studio 2015\Projects\MyLinq\MyLinq\bin\Debug\MyLinq.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\MyLinq\MyLinq\bin\Debug\MyLinq.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\MyLinq\MyLinq\obj\Debug\MyLinq.csprojResolveAssemblyReference.cache
+c:\users\gaggi\documents\visual studio 2015\Projects\MyLinq\MyLinq\obj\Debug\MyLinq.exe
+c:\users\gaggi\documents\visual studio 2015\Projects\MyLinq\MyLinq\obj\Debug\MyLinq.pdb
