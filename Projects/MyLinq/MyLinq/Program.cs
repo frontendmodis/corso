@@ -12,7 +12,7 @@ namespace MyLinq
         {
             var scarpe = new List<Scarpe>()
             {
-                new Scarpe { Id = 1, Colore = "Rosso",  Marca="Cinti",      Tipo = Tipo.Stivali,   Prezzo = 130m  },
+                new Scarpe { Id = 1, Colore = "Rosso",  Marca="Cinti",      Tipo = Tipo.Stivali,   Prezzo = 130m },
                 new Scarpe { Id = 2, Colore = "Blu",    Marca="Armani",     Tipo = Tipo.Stringate, Prezzo = 980m  },
                 new Scarpe { Id = 3, Colore = "Nero",   Marca="Valentino",  Tipo = Tipo.Infradito, Prezzo = 210m  },
                 new Scarpe { Id = 4, Colore = "Beige",  Marca="Balenciaga", Tipo = Tipo.Decollete, Prezzo = 1030m  },
@@ -79,6 +79,7 @@ namespace MyLinq
 
             var colori = scarpe.Select(s => s.Colore).Distinct().OrderBy(c => c);
 
+            risultato = scarpe.Where(s => s.Disponibilità.Any(d => d.Quantità > 0 && d.Taglia == 37));
             Console.ReadLine();
         }
     }

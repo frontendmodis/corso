@@ -13,6 +13,18 @@ namespace MyLinq
         public string Marca { get; set; }
         public decimal Prezzo { get; set; }
         public Tipo Tipo { get; set; }
+        public ICollection<Disponibilità> Disponibilità { get; set; }
+
+        public Scarpe()
+        {
+            this.Disponibilità = new HashSet<Disponibilità>();
+        }
+    }
+
+    public class Disponibilità
+    {
+        public byte Taglia { get; set; }
+        public int Quantità { get; set; }
     }
 
     public enum Tipo : byte
