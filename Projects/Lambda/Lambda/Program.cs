@@ -10,6 +10,12 @@ namespace Lambda
     {
         static void Main(string[] args)
         {
+            var lavoro = new FaccioUnGrossoLavoro();
+
+            Console.WriteLine("Inizio lavoro...");
+            lavoro.Fai();
+            Console.WriteLine("...fine lavoro.");
+            Console.ReadLine();
         }
     }
 }
