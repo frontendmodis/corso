@@ -1,0 +1,1 @@
+c:\users\gaggi\documents\visual studio 2015\Projects\MyLinq\MyLinq\bin\Debug\MyLinq.exe.config
