@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Nelibur.ObjectMapper;
 
 namespace LaNostraRubrica.DAL
 {
@@ -12,30 +13,50 @@ namespace LaNostraRubrica.DAL
         public IEnumerable<PersonaGet> Get()
         {
             var risultato = this.db.Persone.Include("Gruppo")
-                .OrderBy(p => p.Cognome).ThenBy(p => p.Nome);
+                .OrderBy(p => p.Cognome).ThenBy(p => p.Nome).ToList();
 
-            return risultato.Select(p => new PersonaGet
-            {
-                Id = p.Id,
-                Nome = p.Nome,
-                Cognome = p.Cognome,
-                GruppoId = p.Gruppo != null ? p.Gruppo.Id : 0,
-                GruppoNome = p.Gruppo != null ? p.Gruppo.Nome : ""
-            });
+            return TinyMapper.Map<List<PersonaGet>>(risultato);
+
+            //return risultato.Select(p => new PersonaGet
+            //{
+            //    Id = p.Id,
+            //    Nome = p.Nome,
+            //    Cognome = p.Cognome,
+            //    GruppoId = p.Gruppo != null ? p.Gruppo.Id : 0,
+            //    GruppoNome = p.Gruppo != null ? p.Gruppo.Nome : ""
+            //});
         }
 
         public PersonaGet Get(int id)
         {
             var risultato = this.db.Persone.Include("Gruppo").First(p => p.Id == id);
 
-            return new PersonaGet
-            {
-                Id = risultato.Id,
-                Nome = risultato.Nome,
-                Cognome = risultato.Cognome,
-                GruppoId = risultato.Gruppo != null ? risultato.Gruppo.Id : 0,
-                GruppoNome = risultato.Gruppo != null ? risultato.Gruppo.Nome : ""
-            };
+            return TinyMapper.Map<PersonaGet>(risultato);
+            //return new PersonaGet
+            //{
+            //    Id = risultato.Id,
+            //    Nome = risultato.Nome,
+            //    Cognome = risultato.Cognome,
+            //    GruppoId = risultato.Gruppo != null ? risultato.Gruppo.Id : 0,
+            //    GruppoNome = risultato.Gruppo != null ? risultato.Gruppo.Nome : ""
+            //};
+        }
+
+        public IEnumerable<PersonaGet> GetConEmail()
+        {
+            var risultato = this.db.Persone
+                .Where(p => p.Recapiti.Any(r => r.Tipo == TipoRecapito.Email))
+                .OrderBy(p => p.Cognome).ThenBy(p => p.Nome).ToList();
+
+            return TinyMapper.Map<List<PersonaGet>>(risultato);
+
+            //return risultato.Select(p => new PersonaGet {
+            //    Id = p.Id,
+            //    Nome = p.Nome,
+            //    Cognome = p.Cognome,
+            //    GruppoId = p.Gruppo != null ? p.Gruppo.Id : 0,
+            //    GruppoNome = p.Gruppo != null ? p.Gruppo.Nome : ""
+            //});
         }
 
         public int Add(string nome, string cognome)

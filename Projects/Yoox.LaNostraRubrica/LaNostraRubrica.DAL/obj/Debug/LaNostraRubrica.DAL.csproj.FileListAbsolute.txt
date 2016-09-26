@@ -10,3 +10,4 @@ c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNost
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\obj\Debug\LaNostraRubrica.DAL.Migrations.StrutturaIniziale.resources
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\obj\Debug\LaNostraRubrica.DAL.csproj.GenerateResource.Cache
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.DAL\bin\Debug\TinyMapper.dll

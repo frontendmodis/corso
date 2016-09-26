@@ -10,3 +10,4 @@ c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNost
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.Console\bin\Debug\EntityFramework.xml
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.Console\bin\Debug\EntityFramework.SqlServer.dll
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.Console\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.LaNostraRubrica\LaNostraRubrica.Console\bin\Debug\TinyMapper.dll

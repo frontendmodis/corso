@@ -1,4 +1,5 @@
 ﻿using LaNostraRubrica.DAL.ViewModels;
+using Nelibur.ObjectMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +12,26 @@ namespace LaNostraRubrica.DAL
     {
         public IEnumerable<GruppoGet> Get()
         {
-            var risultato = this.db.Gruppi.OrderBy(g => g.Nome);
-            return risultato.Select(g => new GruppoGet {
-                Id = g.Id,
-                Nome = g.Nome
-            });
+            var risultato = this.db.Gruppi.OrderBy(g => g.Nome).ToList();
+
+            return TinyMapper.Map<List<GruppoGet>>(risultato);
+            //return risultato.Select(g => new GruppoGet {
+            //    Id = g.Id,
+            //    Nome = g.Nome
+            //});
         }
 
         public GruppoGet Get(int id)
         {
             var risultato = this.db.Gruppi.Find(id);
-            return new GruppoGet
-            {
-                Id = risultato.Id,
-                Nome = risultato.Nome
-            };
+
+            return TinyMapper.Map<GruppoGet>(risultato);
+
+            //return new GruppoGet
+            //{
+            //    Id = risultato.Id,
+            //    Nome = risultato.Nome
+            //};
         }
 
         public int Add(string nome)
