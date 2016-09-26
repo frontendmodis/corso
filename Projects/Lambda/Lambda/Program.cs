@@ -13,8 +13,9 @@ namespace Lambda
             var lavoro = new FaccioUnGrossoLavoro();
 
             Console.WriteLine("Inizio lavoro...");
-            lavoro.Fai(new FaccioUnGrossoLavoro.Avanzamento(Scrivo));
-            Console.WriteLine("...fine lavoro.");
+            //lavoro.Fai(new FaccioUnGrossoLavoro.Avanzamento(Scrivo));
+            lavoro.Fai(Scrivo);
+            Console.WriteLine("\n...fine lavoro.");
             Console.ReadLine();
         }
 
