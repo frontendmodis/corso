@@ -1,0 +1,13 @@
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\bin\Debug\Yoox.DAL.TeamA.dll.config
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\bin\Debug\Yoox.DAL.TeamA.dll
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\bin\Debug\Yoox.DAL.TeamA.pdb
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\bin\Debug\EntityFramework.dll
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\bin\Debug\EntityFramework.xml
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\obj\Debug\Yoox.DAL.TeamA.csprojResolveAssemblyReference.cache
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\obj\Debug\Yoox.DAL.TeamA.dll
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\obj\Debug\Yoox.DAL.TeamA.pdb
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\obj\Debug\Yoox.DAL.TeamA.Migrations.StrutturaClienti.resources
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\obj\Debug\Yoox.DAL.TeamA.csproj.GenerateResource.Cache
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.DAL.TeamA\obj\Debug\Yoox.DAL.TeamA.Migrations.StrutturaProdottoCarrello.resources

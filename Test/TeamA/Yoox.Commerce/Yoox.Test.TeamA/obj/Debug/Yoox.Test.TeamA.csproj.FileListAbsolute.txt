@@ -1,0 +1,12 @@
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\Yoox.Test.TeamA.exe.config
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\obj\Debug\Yoox.Test.TeamA.csprojResolveAssemblyReference.cache
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\Yoox.Test.TeamA.exe
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\Yoox.Test.TeamA.pdb
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\Yoox.DAL.TeamA.dll
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\EntityFramework.dll
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\Yoox.DAL.TeamA.pdb
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\EntityFramework.xml
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\obj\Debug\Yoox.Test.TeamA.exe
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\obj\Debug\Yoox.Test.TeamA.pdb
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\g-user11\documents\visual studio 2015\Projects\Yoox.Commerce\Yoox.Test.TeamA\bin\Debug\EntityFramework.SqlServer.xml
