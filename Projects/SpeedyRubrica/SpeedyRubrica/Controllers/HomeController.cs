@@ -10,7 +10,9 @@ namespace SpeedyRubrica.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            //var result = View("Index - Copy");
+            var result = View();
+            return result;
         }
 
         public ActionResult About()

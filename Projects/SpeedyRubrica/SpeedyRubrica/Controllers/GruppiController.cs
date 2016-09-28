@@ -17,7 +17,8 @@ namespace SpeedyRubrica.Controllers
         // GET: Gruppi
         public ActionResult Index()
         {
-            return View(db.Gruppi.ToList());
+            var elenco = db.Gruppi.ToList();
+            return View(elenco);
         }
 
         // GET: Gruppi/Details/5
@@ -52,6 +53,8 @@ namespace SpeedyRubrica.Controllers
             {
                 db.Gruppi.Add(gruppo);
                 db.SaveChanges();
+                //var elenco = db.Gruppi.ToList();
+                //return View("Index", elenco);
                 return RedirectToAction("Index");
             }
 

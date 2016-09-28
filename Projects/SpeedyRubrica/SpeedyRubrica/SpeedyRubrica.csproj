@@ -175,7 +175,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Gruppi\Create.cshtml" />
     <Content Include="Views\Gruppi\Delete.cshtml" />
     <Content Include="Views\Gruppi\Details.cshtml" />
@@ -191,6 +190,8 @@
     <Content Include="Views\Recapiti\Details.cshtml" />
     <Content Include="Views\Recapiti\Edit.cshtml" />
     <Content Include="Views\Recapiti\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
