@@ -9,6 +9,12 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@if (TempData.Keys.Contains("Messaggio"))
+{
+    <p>
+        @TempData["Messaggio"]
+    </p>
+}
 <table class="table">
     <tr>
         <th>

@@ -23,7 +23,7 @@ namespace LaNostraRubrica.DAL
 
         [Required, MaxLength(150), MinLength(1)]
         public string Valore { get; set; }
-        [Required]
+        public int Persona_Id { get; set; }
         public Persona Persona { get; set; }
     }
 

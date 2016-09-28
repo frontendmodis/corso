@@ -10,18 +10,26 @@ using LaNostraRubrica.DAL;
 
 namespace SpeedyRubrica.Controllers
 {
+    //[Authorize]
     public class GruppiController : Controller
     {
         private RubricaDb db = new RubricaDb();
 
         // GET: Gruppi
+        //[Authorize(Roles = "Amministratore, SuperUser", Users ="Gabriele, Valerio")]
+        //[AllowAnonymous]
+        //[HandleError(ExceptionType = typeof(UnauthorizedAccessException), View = "Error" )]
         public ActionResult Index()
         {
             var elenco = db.Gruppi.ToList();
+
+            //throw new UnauthorizedAccessException("Non puoi passare!");
+
             return View(elenco);
         }
 
         // GET: Gruppi/Details/5
+        //[OutputCache()]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -47,7 +55,7 @@ namespace SpeedyRubrica.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome")] Gruppo gruppo)
+        public ActionResult Create(Gruppo gruppo)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +63,7 @@ namespace SpeedyRubrica.Controllers
                 db.SaveChanges();
                 //var elenco = db.Gruppi.ToList();
                 //return View("Index", elenco);
+                TempData["Messaggio"] = "Creato gruppo " + gruppo.Id;
                 return RedirectToAction("Index");
             }
 
@@ -81,7 +90,7 @@ namespace SpeedyRubrica.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome")] Gruppo gruppo)
+        public ActionResult Edit(Gruppo gruppo)
         {
             if (ModelState.IsValid)
             {

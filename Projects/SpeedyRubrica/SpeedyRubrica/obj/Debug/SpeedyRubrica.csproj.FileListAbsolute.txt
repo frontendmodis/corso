@@ -41,3 +41,4 @@ c:\users\gaggi\documents\visual studio 2015\Projects\SpeedyRubrica\SpeedyRubrica
 c:\users\gaggi\documents\visual studio 2015\Projects\SpeedyRubrica\SpeedyRubrica\bin\Newtonsoft.Json.xml
 c:\users\gaggi\documents\visual studio 2015\Projects\SpeedyRubrica\SpeedyRubrica\obj\Debug\SpeedyRubrica.dll
 c:\users\gaggi\documents\visual studio 2015\Projects\SpeedyRubrica\SpeedyRubrica\obj\Debug\SpeedyRubrica.pdb
+C:\Users\Gaggi\documents\visual studio 2015\Projects\SpeedyRubrica\SpeedyRubrica\obj\Debug\SpeedyRubrica.csprojResolveAssemblyReference.cache
