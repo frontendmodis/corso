@@ -16,7 +16,9 @@ namespace LaNostraRubrica.DAL
         public string Nome { get; set; }
         [Required, MaxLength(50), MinLength(2)]
         public string Cognome { get; set; }
+        [ForeignKey("Gruppo_Id")]
         public Gruppo Gruppo { get; set; }
+        public int? Gruppo_Id { get; set; }
         public ICollection<Recapito> Recapiti { get; set; }
 
         public Persona()

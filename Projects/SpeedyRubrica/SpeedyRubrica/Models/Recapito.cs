@@ -23,8 +23,10 @@ namespace LaNostraRubrica.DAL
 
         [Required, MaxLength(150), MinLength(1)]
         public string Valore { get; set; }
-        [Required]
+        [ForeignKey("Persona_Id")]
         public Persona Persona { get; set; }
+
+        public int Persona_Id { get; set; }
     }
 
     public enum TipoRecapito : byte

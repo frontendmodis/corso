@@ -128,7 +128,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GruppiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersoneController.cs" />
+    <Compile Include="Controllers\RecapitiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,6 +176,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Gruppi\Create.cshtml" />
+    <Content Include="Views\Gruppi\Delete.cshtml" />
+    <Content Include="Views\Gruppi\Details.cshtml" />
+    <Content Include="Views\Gruppi\Edit.cshtml" />
+    <Content Include="Views\Gruppi\Index.cshtml" />
+    <Content Include="Views\Persone\Create.cshtml" />
+    <Content Include="Views\Persone\Delete.cshtml" />
+    <Content Include="Views\Persone\Details.cshtml" />
+    <Content Include="Views\Persone\Edit.cshtml" />
+    <Content Include="Views\Persone\Index.cshtml" />
+    <Content Include="Views\Recapiti\Create.cshtml" />
+    <Content Include="Views\Recapiti\Delete.cshtml" />
+    <Content Include="Views\Recapiti\Details.cshtml" />
+    <Content Include="Views\Recapiti\Edit.cshtml" />
+    <Content Include="Views\Recapiti\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
