@@ -24,6 +24,7 @@ namespace LaNostraRubrica.DAL
         [Required, MaxLength(150), MinLength(1)]
         public string Valore { get; set; }
         public int Persona_Id { get; set; }
+        [ForeignKey("Persona_Id")]
         public Persona Persona { get; set; }
     }
 

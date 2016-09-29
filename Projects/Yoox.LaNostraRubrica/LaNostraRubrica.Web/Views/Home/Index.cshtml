@@ -1,0 +1,40 @@
+﻿@model LaNostraRubrica.Web.Models.HomeIndexVM
+
+@{
+    ViewBag.Title = "La nostra rubrica";
+}
+
+<h1>La nostra rubrica</h1>
+<ul>
+    <li><a href="">TUTTI</a></li>
+    @foreach (var g in Model.Gruppi)
+    {
+        <li><a href="">@g.Nome</a></li>
+    }
+
+
+</ul>
+
+<form>
+    @Html.EditorFor(m => m.Query)
+    <input type="submit" value="Cerca" />
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Recapito</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var p in Model.Persone)
+        {
+            <tr>
+                <td>@p.NomeCompleto</td>
+                <td>@p.RecapitoPrincipale</td>
+            </tr>
+        }
+    </tbody>
+</table>

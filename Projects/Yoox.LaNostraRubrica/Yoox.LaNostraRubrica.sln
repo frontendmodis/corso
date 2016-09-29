@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaNostraRubrica.DAL", "LaNo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaNostraRubrica.Console", "LaNostraRubrica.Console\LaNostraRubrica.Console.csproj", "{252987D8-6815-4A2C-92D0-1DC0373C45B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaNostraRubrica.Web", "LaNostraRubrica.Web\LaNostraRubrica.Web.csproj", "{6A6F6054-A7B2-47B9-B894-8446C5E87C2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{252987D8-6815-4A2C-92D0-1DC0373C45B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252987D8-6815-4A2C-92D0-1DC0373C45B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252987D8-6815-4A2C-92D0-1DC0373C45B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6F6054-A7B2-47B9-B894-8446C5E87C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6F6054-A7B2-47B9-B894-8446C5E87C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6F6054-A7B2-47B9-B894-8446C5E87C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6F6054-A7B2-47B9-B894-8446C5E87C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
