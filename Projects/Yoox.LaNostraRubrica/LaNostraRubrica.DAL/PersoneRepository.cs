@@ -10,21 +10,38 @@ namespace LaNostraRubrica.DAL
 {
     public class PersoneRepository : BaseRepository
     {
-        public IEnumerable<PersonaGet> Get()
+        public IEnumerable<PersonaGet> Get(int? gruppoId = null, string ricerca = null)
         {
-            var risultato = this.db.Persone.Include("Gruppo")
-                .OrderBy(p => p.Cognome).ThenBy(p => p.Nome).ToList();
+            //List<Persona> risultato = null;
 
-            return TinyMapper.Map<List<PersonaGet>>(risultato);
-
-            //return risultato.Select(p => new PersonaGet
+            //if (gruppoId == null)
             //{
-            //    Id = p.Id,
-            //    Nome = p.Nome,
-            //    Cognome = p.Cognome,
-            //    GruppoId = p.Gruppo != null ? p.Gruppo.Id : 0,
-            //    GruppoNome = p.Gruppo != null ? p.Gruppo.Nome : ""
-            //});
+            //    risultato = this.db.Persone.Include("Gruppo")
+            //        .OrderBy(p => p.Cognome).ThenBy(p => p.Nome).ToList();
+
+            //} else
+            //{
+            //    risultato = this.db.Persone.Include("Gruppo")
+            //        .Where(p => p.Gruppo_Id == gruppoId.Value)
+            //        .OrderBy(p => p.Cognome).ThenBy(p => p.Nome).ToList();
+            //}
+
+            var risultato = this.db.Persone.Include("Gruppo").Include("Recapiti")
+                .Where(p => gruppoId == null || p.Gruppo_Id == gruppoId.Value)
+                .Where(p => ricerca == null || p.Nome.Contains(ricerca) || p.Cognome.Contains(ricerca))
+                .OrderBy(p => p.Cognome).ThenBy(p => p.Nome);
+
+            //return TinyMapper.Map<List<PersonaGet>>(risultato);
+
+            return risultato.Select(p => new PersonaGet
+            {
+                Id = p.Id,
+                Nome = p.Nome,
+                Cognome = p.Cognome,
+                GruppoId = p.Gruppo != null ? p.Gruppo.Id : 0,
+                GruppoNome = p.Gruppo != null ? p.Gruppo.Nome : "",
+                RecapitoPrincipale = p.Recapiti.Count() >= 0 ? p.Recapiti.FirstOrDefault().Valore : ""
+            }).ToList();
         }
 
         public PersonaGet Get(int id)

@@ -14,6 +14,7 @@ namespace LaNostraRubrica.DAL.ViewModels
         public string Cognome { get; set; }
         public int GruppoId { get; set; }
         public string GruppoNome { get; set; }
+        public string RecapitoPrincipale { get; set; }
 
         static PersonaGet()
         {

@@ -4,19 +4,26 @@
     ViewBag.Title = "La nostra rubrica";
 }
 
-<h1>La nostra rubrica</h1>
-<ul>
-    <li><a href="">TUTTI</a></li>
-    @foreach (var g in Model.Gruppi)
-    {
-        <li><a href="">@g.Nome</a></li>
-    }
+<header>
+    <h1>La nostra rubrica</h1>
+</header>
 
+<nav>
+    <ul>
+        <li><a href="@Url.Action("Index", new { Query = Model.Query})">TUTTI</a></li>
+        @foreach (var g in Model.Gruppi)
+        {
+            <li><a href="@Url.Action("Index", new { gruppoId = g.Id, Query = Model.Query })">@g.Nome</a></li>
+        }
+    </ul>
+</nav>
 
-</ul>
-
-<form>
-    @Html.EditorFor(m => m.Query)
+<form action="@Url.Action("Index")" method="get">
+    <fieldset>
+        <legend>Cerca contatto</legend>
+        @Html.EditorFor(m => m.Query)
+    </fieldset>
+    <input type="hidden" name="gruppoId" value="@Model.Gruppo_Id" />
     <input type="submit" value="Cerca" />
 </form>
 

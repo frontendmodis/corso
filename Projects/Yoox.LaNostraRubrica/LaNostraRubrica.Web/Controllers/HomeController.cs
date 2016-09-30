@@ -21,23 +21,29 @@ namespace LaNostraRubrica.Web.Controllers
         }
 
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(int? gruppoId = null, string Query = null)
         {
             var model = new HomeIndexVM();
+            model.Gruppo_Id = gruppoId;
+            model.Query = Query;
+
             using (var rp = new GruppiRepository())
             {
                 var g = rp.Get();
                 model.Gruppi = TinyMapper.Map<List<HomeIndexGruppoVM>>(g);
             }
+
             using (var rp = new PersoneRepository())
             {
-                var p = rp.Get();
+                var p = rp.Get(gruppoId, Query);
                 model.Persone = p.Select(a => new HomeIndexPersonaVM
                 {
                     Id = a.Id,
-                    NomeCompleto = a.Nome + " " + a.Cognome
+                    NomeCompleto = a.Nome + " " + a.Cognome,
+                    RecapitoPrincipale = a.RecapitoPrincipale
                 });
             }
+
             return View(model);
         }
     }

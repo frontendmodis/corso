@@ -1,17 +1,20 @@
 ﻿<!DOCTYPE html>
-
-<html>
+<html lang="it">
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <ul>
-        <li><a href="@Url.Action("Index","Home")">Home</a></li>
-        <li><a href="@Url.Action("Index","Gruppi")">Gruppi</a></li>
-    </ul>
-    <div> 
+
+    <nav>
+        <ul>
+            <li><a href="@Url.Action("Index","Home")">Home</a></li>
+            <li><a href="@Url.Action("Index","Gruppi")">Gruppi</a></li>
+        </ul>
+    </nav>
+
+    <main> 
         @RenderBody()
-    </div>
+    </main>
 </body>
 </html>
