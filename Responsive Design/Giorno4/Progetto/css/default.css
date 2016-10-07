@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* template */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.hide {
+	display: none;
+}
+.container {
+	width: 1000px;
+	margin: auto;
+}
+.container::before, .container::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+.btn-user {
+	background: transparent;
+	border: none;
+	float: right;
+	color: #fff;
+}
+.box-img {
+	position: relative;
+}
+.box-img img {
+	position: absolute;
+	min-width: 100%;
+	left: 0; 
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.img-radius {
+	border-radius: 100px;
+}
+#header {
+	height: 220px;
+}
+#user-area {
+	background: #ab2525;
+	height: 40px;
+}
+.logo {
+	margin-top: 40px;
+}
+.logo img, .logo h1 {
+	float: left;
+}
+.logo h1 {
+	font-size: 40px;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+#navigation {
+	background: #ddd;
+	margin: 0;
+	padding: 0;
+}
+#navigation ul {
+	padding: 10px 0px;
+}
+#navigation li {
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-left: 1px solid #333;
+}
+#navigation li:first-child {
+	border-left: none;
+}
+#navigation li a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	color: #666;
+	cursor: pointer;
+	text-decoration: none;
+}
+#navigation li a:hover {
+	color: #fff;
+}
+#navigation li:hover {
+	background-color: #666;
+}
+#welcome {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	overflow: hidden;
+}
+#welcome figure {
+	float: left;
+	width: 308px;
+}
+#welcome .box-text {
+	float: left;
+	width: 692px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+#welcome h2 {
+	font-size: 24px;
+}
+#welcome p {
+	font-size: 18px;
+	margin-top: 25px;
+}
+
+h2 {
+	font-size: 24px;
+}
+p {
+	font-size: 12px;
+	line-height: 150%;;
+}
+#news {
+	width: 100%;
+}
+
+#news-list {
+	width: 610px;
+	float: left;
+}
+
+#news-list li {
+	float: left;
+	clear: left;
+	margin-bottom: 50px;
+	width: 100%;
+}
+#news-list figure {
+	float: left;
+	width: 170px;
+	overflow: hidden;
+}
+#news-list .box-description {
+	float: left;
+	width: 420px;
+	margin-left: 20px;
+}
+
+#sidebar {
+	width: 320px;
+	float: left;
+	margin-left: 70px;
+}
+#sidebar li {
+	margin-bottom: 50px;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+#sidebar .box-description {
+	width: 200px;
+	float: left;
+	margin-left: 20px;
+}
+#sidebar .box-img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	overflow: hidden;
+}
+#gallery {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	overflow: hidden;
+}
+#gallery figure {
+	float: left;
+	width: 300px;
+	margin-left: 50px;
+	overflow: hidden;
+}
+#gallery figure img {
+	width: 100%;
+	margin: 0;
+}
+#gallery figure:first-child {
+	margin-left: 0px;
+}
+#gallery figcaption {
+	background: #808080;
+	margin: 0;
+	padding: 5px;
+	box-sizing: border-box;
+	color: #fff;
+}
+#content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	overflow: hidden;
+}
+#content li {
+	float: left;
+	width: 300px;
+	margin-left: 50px;
+}
+#content li:first-child {
+	margin-left: 0px;
+}
+#content .box-img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	overflow: hidden;
+	margin-right: 10px;
+}
+#tablist {
+	margin-top: 50px;
+}
+#tablist .tab-nav {
+	float: left;
+}
+#tablist .tab-nav li {
+	float: left;
+}
+#tablist .tab-content {
+	float: left;
+	clear: left;
+	background: #ddd;
+	padding: 20px;
+	box-sizing: border-box;
+}
+#tablist .box-img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	overflow: hidden;
+	margin-right: 15px;
+}
+#tablist .tab-nav ul {
+	float: left;
+}
+#tablist .tab-nav li {
+	padding: 10px;
+	float: left;
+	color: #fff;
+	background: #666;
+	cursor: pointer;
+}
+#tablist .tab-nav li.active {
+	color: #333;
+	background: #ddd;
+}
+#footer {
+	margin-top: 50px;
+}
+#footer .footer-top {
+	height: 236px;
+	background: url('../images/bg-footer.png') repeat-x left top;
+	color: #fff;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+#footer .footer-top .col {
+	float: left;
+	width: 250px;
+}
+#footer .footer-top li {
+	line-height: 30px;
+}
+
+#footer .footer-top .col a {
+	color: #fff;
+	text-decoration: none;
+}
+#footer .footer-top .col h3 {
+	font-size: 18px;
+}
+#footer .footer-btm {
+	float: left;
+	width: 100%;
+	background: #ab2525;
+	height: 160px;
+	box-sizing: border-box;
+	padding-top: 30px;
+}
+#footer .footer-btm small {
+	float: left;
+	color: #fff;
+}
+#footer .footer-btm form {
+	float: right;
+}

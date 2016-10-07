@@ -1,0 +1,33 @@
+Esercizio
+ 	
+ 	Attraverso Balsamiq Mockup progettare il layout di un sito web completo per desktop, tablet e smartphone. 
+ 	Costituito da: Home – Chi Siamo – News (lista e dettaglio) – Gallery (foto e video) – Contatti (form e mappa).
+
+Homepage costituita da
+Header
+?	Logo
+?	Intestazione
+
+Nav
+?	Link di navigazione
+
+Slideshow
+?	Foto
+
+Article main  con 3 sezioni
+?	Sezione 1 a colonna singola
+?	Titolo
+?	Paragrafo
+?	Foto
+
+?	Sezione 2 a due colonne
+?	Colonna a sx e a dx con Lista, ogni elemento della lista dev’essere costituito da: Foto, Titolo, Paragrafo
+
+?	Sezione 3 a tre colonne
+?	Foto 
+?	Descrizione foto
+
+Footer
+?	Lista link a 4 colonne
+?	Copyright
+
