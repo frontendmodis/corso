@@ -1,0 +1,13 @@
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\Yoox.Commerce.Dal.TeamB.dll.config
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\Yoox.Commerce.Dal.TeamB.dll
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\Yoox.Commerce.Dal.TeamB.pdb
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\EntityFramework.dll
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\TinyMapper.dll
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\EntityFramework.xml
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\obj\Debug\Yoox.Commerce.Dal.TeamB.csprojResolveAssemblyReference.cache
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\obj\Debug\Yoox.Commerce.Dal.TeamB.Migrations.StrutturaIniziale.resources
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\obj\Debug\Yoox.Commerce.Dal.TeamB.csproj.GenerateResource.Cache
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\obj\Debug\Yoox.Commerce.Dal.TeamB.dll
+C:\Users\Gaggi\Documents\Visual Studio 2015\Projects\Yoox.Commerce\Yoox.Commerce.Dal.TeamB\obj\Debug\Yoox.Commerce.Dal.TeamB.pdb

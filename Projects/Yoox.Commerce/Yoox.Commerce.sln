@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yoox.Commerce.Dal.TeamA", "Yoox.Commerce.Dal.TeamA\Yoox.Commerce.Dal.TeamA.csproj", "{2C978EC0-322A-4A2D-A8C6-66D0E44ED7E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yoox.Commerce.Dal.TeamB", "Yoox.Commerce.Dal.TeamB\Yoox.Commerce.Dal.TeamB.csproj", "{74F10DB5-8EBB-4140-9BDA-8E925FE26F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yoox.Commerce.Dal.TeamC", "Yoox.Commerce.Dal.TeamC\Yoox.Commerce.Dal.TeamC.csproj", "{AB678F8A-6C7D-481D-A520-FDEB0D01E527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yoox.Commerce.Api", "Yoox.Commerce.Api\Yoox.Commerce.Api.csproj", "{5F77DA8B-1E3C-41A7-8D53-819BE741176C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yoox.Commerce.Web", "Yoox.Commerce.Web\Yoox.Commerce.Web.csproj", "{1AFEFCA6-A877-4D0C-8E1E-6AC1CB642D4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C978EC0-322A-4A2D-A8C6-66D0E44ED7E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C978EC0-322A-4A2D-A8C6-66D0E44ED7E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C978EC0-322A-4A2D-A8C6-66D0E44ED7E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C978EC0-322A-4A2D-A8C6-66D0E44ED7E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F10DB5-8EBB-4140-9BDA-8E925FE26F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F10DB5-8EBB-4140-9BDA-8E925FE26F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F10DB5-8EBB-4140-9BDA-8E925FE26F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F10DB5-8EBB-4140-9BDA-8E925FE26F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB678F8A-6C7D-481D-A520-FDEB0D01E527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB678F8A-6C7D-481D-A520-FDEB0D01E527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB678F8A-6C7D-481D-A520-FDEB0D01E527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB678F8A-6C7D-481D-A520-FDEB0D01E527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F77DA8B-1E3C-41A7-8D53-819BE741176C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F77DA8B-1E3C-41A7-8D53-819BE741176C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F77DA8B-1E3C-41A7-8D53-819BE741176C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F77DA8B-1E3C-41A7-8D53-819BE741176C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFEFCA6-A877-4D0C-8E1E-6AC1CB642D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFEFCA6-A877-4D0C-8E1E-6AC1CB642D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFEFCA6-A877-4D0C-8E1E-6AC1CB642D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFEFCA6-A877-4D0C-8E1E-6AC1CB642D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
