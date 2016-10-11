@@ -67,3 +67,6 @@ c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.ToDoList\Yoox.ToDoList
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.ToDoList\Yoox.ToDoList\obj\Debug\Yoox.ToDoList.csprojResolveAssemblyReference.cache
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.ToDoList\Yoox.ToDoList\obj\Debug\Yoox.ToDoList.dll
 c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.ToDoList\Yoox.ToDoList\obj\Debug\Yoox.ToDoList.pdb
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.ToDoList\Yoox.ToDoList\obj\Debug\Yoox.ToDoList.Migrations.InitialCreate.resources
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.ToDoList\Yoox.ToDoList\obj\Debug\Yoox.ToDoList.csproj.GenerateResource.Cache
+c:\users\gaggi\documents\visual studio 2015\Projects\Yoox.ToDoList\Yoox.ToDoList\obj\Debug\Yoox.ToDoList.Migrations.AggiuntiTodo.resources

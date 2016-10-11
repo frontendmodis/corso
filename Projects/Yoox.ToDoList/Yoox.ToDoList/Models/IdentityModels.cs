@@ -33,7 +33,7 @@ namespace Yoox.ToDoList.Models
         {
         }
 
-        public static DbSet<Todo> Todos { get; set; }
+        public virtual DbSet<Todo> Todos { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
