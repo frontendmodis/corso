@@ -1,0 +1,100 @@
+body{
+    background-color: #f2f2f2;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin: 0.5em;
+}
+
+header {
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    margin: -0.5em -0.5em 1em -0.5em;
+    padding: 0.5em;
+    background-color: #f2f2f2;
+}
+
+main.down header > h1 {
+    display:none;
+}
+
+main.down {
+    margin-top:7.4em;
+}
+
+main.down header {
+    position: fixed;
+    top: 0;
+}
+
+header > h1 {
+    font-size: 1.5em;
+    color:darkcyan;
+    font-weight: bolder;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.hide {
+    display: none;
+}
+
+#myForm {
+    padding-top: 0.5em;    
+    display: flex;
+}
+#myForm > fieldset {
+        padding-right: 1.5em;
+}
+
+#myForm > button {
+    border-radius: 50%;
+    border-width:0;
+    margin:0 0.2em;
+}
+
+main.down #myForm {
+    margin-right: 0.5em;
+}
+
+#todo {
+    border-radius: 0.82em;
+    font-size: 1.25em;
+    width: 100%;
+    border:0;    
+    padding:0.2em 0.5em;
+}
+
+#svgPlus, #svgTrash {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#todo:focus{
+    outline: none;
+}
+
+.done {
+    color:#a1a1a1;
+    font-style: oblique;
+}
+
+#myList li {
+    text-align: center;
+    padding: 2em 0 0.5em;
+        line-height: 0.8em;
+}
+
+#myList li:after {
+    display:block;
+    content:"";
+    height: 1px;
+    width:50%;
+    margin:0.5em auto 0;
+    border-bottom: 1px solid black;
+}
+
+
+/*@media only screen and(max-width: )*/
+
