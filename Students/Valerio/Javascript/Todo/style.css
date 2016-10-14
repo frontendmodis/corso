@@ -1,0 +1,113 @@
+/* HTML Style */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: yellowgreen;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header, main {
+    margin: auto;
+}
+
+header {
+    background: black;
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Input */
+#myForm{
+    background-color: #555;
+    padding: 10px;
+}
+
+#myForm.fixed {
+    position:fixed;
+    top:0;
+}
+
+#myForm svg {
+    width: 2.4em;
+    height: 2.4em;
+}
+
+#myForm button, #myForm input {
+    display: block;
+    font-size: 1.1em;
+    height: 2.5em;
+    border: none;
+    float: left;
+}
+
+#myReset, #myForm__submit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    width: 15%;
+}
+
+#myForm__text { /* Textarea */
+    width: 70%;
+    padding: 0 10px;
+}
+
+#myForm::after {
+    content: "";
+    display: block;
+    clear:both;
+}
+
+/* List */
+
+
+#myList > li {
+    background-color: #4CAF50;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+#myList > li::before {
+    content:"";
+    display:inline-block;
+    background: url('notdone.svg');
+    background-size: 1.3em 1.3em;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+}
+
+#myList > li.done {
+    background-color: gray;
+}
+
+#myList > li.done::before {
+    background: url('done.svg');
+    background-size: 1.3em 1.3em;
+}
+
+
+/* Media Query */
+
+@media only screen and (min-width: 768px){
+    header, main {
+        width: 768px;
+    }
+}
+
