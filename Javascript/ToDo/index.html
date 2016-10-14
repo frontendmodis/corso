@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+
+        li {
+            border:1px solid black;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <h1>La mia ToDo List</h1>
+
+    <ul id="myList">
+        <li>Comprare l'acqua</li>
+        <li>Comprare rughetta</li>
+        <li>Comprare salsiccia</li>
+        <li class="done">Andare al corso</li>
+    </ul>
+    
+    <form id="myForm">
+        <fieldset>
+            <caption>Nuovo ToDo</caption>
+            <div><label for="todo">ToDo</label><input id="todo" type="text"></div>
+        </fieldset>
+        <input type="submit" value="Aggiungi">
+    </form>
+
+    <input type="button" id="myReset" value="Reset" />
+    
+    <script>
+        (function(){
+            "use strict";
+
+            init();
+
+            function init(){
+                load();
+
+                var myForm = document.getElementById('myForm');
+                myForm.addEventListener('submit', myFormSubmitted);
+
+                var myReset = document.getElementById('myReset');
+                myReset.addEventListener('click', myResetClicked);
+                
+            }
+
+            function myFormSubmitted(e){
+                e.preventDefault();
+
+                var input = document.getElementById('todo');
+                var li = document.createElement('li');
+                li.innerHTML = input.value;
+                li.setAttribute('draggable', 'true');
+                addLiListener(li);  
+
+                var myList = document.getElementById('myList');
+                myList.appendChild(li);
+                save();
+
+                input.value = '';
+            }
+
+            function myResetClicked(e){
+                var fatti = document.getElementsByClassName('done');
+                var myList = document.getElementById('myList');
+
+                for(var i = fatti.length - 1; i >= 0; i--){
+                    myList.removeChild(fatti[i]);
+                } 
+                save();
+            }
+
+            function liClicked(){
+                if(this.className == 'done'){
+                    this.className = '';
+                } else {
+                    this.className = 'done';
+                }
+                save();
+            }
+
+            function save(){
+                var myList = document.getElementById('myList');
+                localStorage.setItem('todo', myList.innerHTML);
+            }
+            
+            function load(){
+                var todos = localStorage.getItem('todo');
+                var myList = document.getElementById('myList');
+                myList.innerHTML = todos;
+
+                var listItem = myList.childNodes;
+                for(var i = 0; i < listItem.length; i++){
+                     addLiListener(listItem[i]);                     
+                }
+            }
+
+            function addLiListener(li){
+                li.addEventListener('click', liClicked);
+                li.addEventListener('dragstart', drag);
+                li.addEventListener('drop', drop);
+                li.addEventListener('dragover', dragOver);                                     
+            }            
+
+            function drag(e){
+                var nodeList = Array.prototype.slice.call(document.getElementsByTagName('li'));
+                var index = nodeList.indexOf(e.target);        
+                e.dataTransfer.setData("listItemIndex", index);
+            }
+
+            function drop(e){
+                e.preventDefault();
+                var nodeList = Array.prototype.slice.call(document.getElementsByTagName('li'));                
+                var ixO = parseInt(e.dataTransfer.getData("listItemIndex"));
+                var origin = nodeList[ixO];
+                var ixD = nodeList.indexOf(e.target);
+                var destination = e.target;
+                var myList = document.getElementById('myList');
+
+                var destinationContent = destination.innerHTML;
+                var destinationClass = destination.className;
+
+                destination.innerHTML = origin.innerHTML;
+                destination.className = origin.className;
+                origin.innerHTML = destinationContent;
+                origin.className = destinationClass;
+                
+                save();
+            }
+
+            function dragOver(e){
+                e.preventDefault();
+            }
+            
+        })();
+    </script>
+</body>
+</html>
