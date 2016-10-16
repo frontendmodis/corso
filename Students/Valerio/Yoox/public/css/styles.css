@@ -865,30 +865,74 @@ main {
     @media screen and (min-width: 40em) {
       .news__article > header {
         width: 28.57143%; } }
-  .news__article > section {
+  .news__article > div {
     width: 100%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
-      .news__article > section {
+      .news__article > div {
         padding-left: 0.625rem;
         padding-right: 0.625rem; } }
-    .news__article > section:last-child:not(:first-child) {
+    .news__article > div:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
-      .news__article > section {
+      .news__article > div {
         width: 71.42857%; } }
     @media screen and (min-width: 64em) {
-      .news__article > section {
+      .news__article > div {
         column-count: 2; } }
 
 /* end .news__article */
+#tabs {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto; }
+  #tabs::before, #tabs::after {
+    content: ' ';
+    display: table; }
+  #tabs::after {
+    clear: both; }
+
+/* end #tabs */
+#tab-navigation {
+  background: yellow;
+  width: 100%;
+  float: left; }
+  #tab-navigation > ul {
+    margin: 0 0.625rem;
+    list-style-type: none;
+    background: red; }
+  #tab-navigation:last-child:not(:first-child) {
+    float: right; }
+  @media screen and (min-width: 40em) {
+    #tab-navigation {
+      width: 28.57143%; } }
+
+#tab-content {
+  width: 100%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  @media screen and (min-width: 40em) {
+    #tab-content {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem; } }
+  #tab-content:last-child:not(:first-child) {
+    float: right; }
+  @media screen and (min-width: 40em) {
+    #tab-content {
+      width: 71.42857%; } }
+
 h1, h2, h3 {
   font-family: 'knockout-regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; }
 
 h1, h2, h3, h4, h5 {
   text-transform: uppercase; }
+
+#tab-navigation > ul {
+  text-transform: uppercase;
+  font-size: 1.5rem; }
 
 @font-face {
   font-family: 'knockout-light';

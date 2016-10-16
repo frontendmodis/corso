@@ -6,6 +6,11 @@ h1, h2, h3, h4, h5 {
     text-transform: uppercase;
 }
 
+#tab-navigation > ul {
+    text-transform: uppercase;
+    font-size: rem-calc(24);
+}
+
 @font-face {
   font-family: 'knockout-light';
   src: url('../assets/fonts/knoc29jl-webfont.eot'); /* IE9 Compat Modes */
