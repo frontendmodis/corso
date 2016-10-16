@@ -1,0 +1,20 @@
+{
+  "name": "yoox",
+  "description": "Esercizio Frontend per Yoox",
+  "main": "public/index.html",
+  "authors": [
+    "Valerio Innocenti Sedili <vinnocenti@outlook.it>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/frontendmodis/corso",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  }
+}
