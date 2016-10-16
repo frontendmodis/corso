@@ -1,6 +1,12 @@
+$news-row-size: 7;
+$news-sm-col-size-header: 7;
+$news-md-col-size-header: 2;
+$news-sm-col-size-content: 7;
+$news-md-col-size-content: 5;
+
 #news {
     > header {
-        background: gray;
+        background: $light-gray;
         @include grid-column-row;
         }
 
@@ -12,18 +18,18 @@
         }
     } /* end #news */
     .news__article {
-        background: gray;
-        @include grid-row(12);
+        background: $light-gray;
+        @include grid-row($news-row-size);
         > header {
-            @include grid-column(12);
+            @include grid-column($news-sm-col-size-header);
             @include breakpoint(medium){
-                @include grid-column-size(3);
+                @include grid-column-size($news-md-col-size-header);
                 }
             }
         > section {
-            @include grid-column(12);
+            @include grid-column($news-sm-col-size-content);
             @include breakpoint(medium){
-                @include grid-column-size(9);
+                @include grid-column-size($news-md-col-size-content);
                 }
 
             > p {

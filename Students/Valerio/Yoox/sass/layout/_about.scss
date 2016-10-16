@@ -1,17 +1,23 @@
+$about-row-size: 7;
+$about-sm-col-size-header: 7;
+$about-md-col-size-header: 2;
+$about-sm-col-size-content: 7;
+$about-md-col-size-content: 5;
+
 #about {
-    @include grid-row(12);
+    @include grid-row($about-row-size);
 
     > header {
-        @include grid-column(12);
+        @include grid-column($about-sm-col-size-header);
         @include breakpoint(medium){
-            @include grid-column-size(3);
+            @include grid-column-size($about-md-col-size-header);
             }
         }
 
     > section {
-        @include grid-column(12);
+        @include grid-column($about-sm-col-size-content);
         @include breakpoint(medium){
-            @include grid-column-size(9);
+            @include grid-column-size($about-md-col-size-content);
             }
         }
 
