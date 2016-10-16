@@ -1,0 +1,11 @@
+//================== Foundation ==============
+@import 'util/util';
+@import "foundation/settings";
+@import 'foundation';
+@include foundation-global-styles; 
+
+//================== Scss ====================
+@import "layout/main";
+
+
+

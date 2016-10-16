@@ -1,0 +1,24 @@
+#about {
+    @include grid-row(12);
+
+    > header {
+        @include grid-column(12);
+        @include breakpoint(medium){
+            @include grid-column-size(3);
+            }
+        }
+
+    > section {
+        @include grid-column(12);
+        @include breakpoint(medium){
+            @include grid-column-size(9);
+            }
+        }
+
+    ul {
+        @include breakpoint(large){
+            column-count: 2;
+            }
+        }
+
+    } /* end #about */

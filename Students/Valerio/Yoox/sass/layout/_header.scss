@@ -1,0 +1,7 @@
+#main-header {
+    @include grid-column-row;
+}
+
+main {
+    @include grid-column-row;
+}

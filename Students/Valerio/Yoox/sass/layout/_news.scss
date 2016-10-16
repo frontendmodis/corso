@@ -1,0 +1,36 @@
+#news {
+    > header {
+        background: gray;
+        @include grid-column-row;
+        }
+
+    > nav {
+        text-align: center;
+        @include breakpoint(medium){
+            text-align: right;
+                padding-right: $news-navigation-padding;
+            }
+        }
+    } /* end #news */
+    .news__article {
+        background: gray;
+        @include grid-row(12);
+        > header {
+            @include grid-column(12);
+            @include breakpoint(medium){
+                @include grid-column-size(3);
+                }
+            }
+        > section {
+            @include grid-column(12);
+            @include breakpoint(medium){
+                @include grid-column-size(9);
+                }
+
+            > p {
+                @include breakpoint(large){
+                    column-count: 2;
+                    }
+                }
+            }
+        } /* end .news__article */
