@@ -1,0 +1,18 @@
+{
+	"item": {
+		"name": "CAMICIA MANICHE LUNGHE",
+		"details": "Crêpe, Collo all'italiana, Polsini con bottoni, Bottoni nascosti, Fondo arrotondato.",
+		"composition": "Composizione: 100% Seta",
+		"modelDetails": [
+			"La modella indossa una taglia 40",
+			"Misure: 84 - 60 - 90",
+			"Altezza modella: 179cm"
+		],
+		"images": [
+			"http://cdn.yoox.biz/42/42266674ce_12n_f.jpg",
+			"http://cdn.yoox.biz/42/42266674ce_12n_r.jpg",
+			"http://cdn.yoox.biz/42/42266674ce_12n_e.jpg",
+			"http://cdn.yoox.biz/42/42266674ce_12n_d.jpg"
+		]
+	}
+}

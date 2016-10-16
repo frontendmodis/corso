@@ -1,0 +1,18 @@
+{
+	"item": {
+		"name": "ABITO CORTO",
+		"details": "Maglia leggera, Collo a V, Interno semi-foderato, Logo.",
+		"composition": "Composizione: 94% Viscosa, 6% Elastam.",
+		"modelDetails": [
+			"La modella indossa una taglia 40",
+			"Misure: 86 - 60 - 90",
+			"Altezza modella: 178cm"
+		],
+		"images": [
+			"http://cdn.yoox.biz/34/34295573it_12n_f.jpg",
+			"http://cdn.yoox.biz/34/34295573it_12n_r.jpg",
+			"http://cdn.yoox.biz/34/34295573it_12n_e.jpg",
+			"http://cdn.yoox.biz/34/34295573it_12n_d.jpg"
+		]
+	}
+}

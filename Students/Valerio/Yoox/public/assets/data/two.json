@@ -1,0 +1,18 @@
+{
+	"item": {
+		"name": "BIKINI",
+		"details": "Tessuto sintetico, Chiusura con laccetti, Interno foderato, Sgambato, Logo.",
+		"composition": "Composizione: 79% Poliammide, 21% Elastam",
+		"modelDetails": [
+			"La modella indossa una taglia 40",
+			"Misure: 86 - 60 - 90",
+			"Altezza modella: 178cm"
+		],
+		"images": [
+			"http://cdn.yoox.biz/47/47141306nv_12n_f.jpg",
+			"http://cdn.yoox.biz/47/47141306nv_12n_r.jpg",
+			"http://cdn.yoox.biz/47/47141306nv_12n_e.jpg",
+			"http://cdn.yoox.biz/47/47141306nv_12n_d.jpg"
+		]
+	}
+}

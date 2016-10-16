@@ -1,0 +1,18 @@
+{
+	"item": {
+		"name": "JEANS",
+		"details": "Denim, Lavaggio colorato, Vita con passanti, Zip e bottoni, Cinque tasche, Logo, Borchiette. Larghezza del fondo: 20,0cm",
+		"composition": "98% Cotone, 2% Elastam",
+		"modelDetails": [
+			"La modella indossa una taglia 40",
+			"Misure: 86 - 60 - 90",
+			"Altezza modella: 178cm"
+		],
+		"images": [
+			"http://cdn.yoox.biz/38/38297439sd_12n_f.jpg",
+			"http://cdn.yoox.biz/38/38297439sd_12n_r.jpg",
+			"http://cdn.yoox.biz/38/38297439sd_12n_e.jpg",
+			"http://cdn.yoox.biz/38/38297439sd_12n_d.jpg"
+		]
+	}
+}
