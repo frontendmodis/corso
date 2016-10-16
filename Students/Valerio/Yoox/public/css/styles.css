@@ -375,7 +375,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "knockout-light", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -586,3 +586,16 @@ main {
         column-count: 2; } }
 
 /* end .news__article */
+@font-face {
+  font-family: 'knockout-light';
+  src: url("../assets/fonts/knoc29jl-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../assets/fonts/knoc29jl-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/knoc29jl-webfont.woff2") format("woff2"), url("../assets/fonts/knoc29jl-webfont.woff") format("woff"), url("../assets/fonts/knoc29jl-webfont.ttf") format("truetype"), url("../assets/fonts/knoc29jl-webfont.svg#knockoutlightlight") format("svg");
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: 'knockout-regular';
+  src: url("../assets/fonts/knock49l-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../assets/fonts/knock49l-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/knock49l-webfont.woff2") format("woff2"), url("../assets/fonts/knock49l-webfont.woff") format("woff"), url("../assets/fonts/knock49l-webfont.ttf") format("truetype"), url("../assets/fonts/knock49l-webfont.svg#knockoutregularregular") format("svg");
+  /* Legacy iOS */ }
