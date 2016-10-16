@@ -1,12 +1,22 @@
-$news-row-size: 7;
-$news-sm-col-size-header: 7;
-$news-md-col-size-header: 2;
-$news-sm-col-size-content: 7;
-$news-md-col-size-content: 5;
+$news-sm-col-size-header: 100%;
+$news-sm-col-size-content: 100%;
+
+$news-md-col-size-header: 2 of 7;
+$news-md-col-size-content: 5 of 7;
+
+$news-padding-top: rem-calc(8);
+$news-header-padding-top: rem-calc(18);
+$news-padding-bottom: rem-calc(34);
+
+$news-border: 1px solid $light-gray;
+$news-backgroud: $lighter-gray;
 
 #news {
     > header {
-        background: $light-gray;
+        background: $news-backgroud;
+        border-top: $news-border;
+        padding-top: $news-header-padding-top;
+
         @include grid-column-row;
         }
 
@@ -18,8 +28,12 @@ $news-md-col-size-content: 5;
         }
     } /* end #news */
     .news__article {
-        background: $light-gray;
-        @include grid-row($news-row-size);
+        background: $news-backgroud;
+        border-bottom: $news-border;
+        padding-top: $news-padding-top;
+        padding-bottom: $news-padding-bottom;
+
+        @include grid-row();
         > header {
             @include grid-column($news-sm-col-size-header);
             @include breakpoint(medium){
@@ -31,11 +45,8 @@ $news-md-col-size-content: 5;
             @include breakpoint(medium){
                 @include grid-column-size($news-md-col-size-content);
                 }
-
-            > p {
-                @include breakpoint(large){
-                    column-count: 2;
-                    }
+            @include breakpoint(large){
+                column-count: 2;
                 }
             }
         } /* end .news__article */

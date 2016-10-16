@@ -1,13 +1,19 @@
-$about-row-size: 7;
-$about-sm-col-size-header: 7;
-$about-md-col-size-header: 2;
-$about-sm-col-size-content: 7;
-$about-md-col-size-content: 5;
+$about-sm-col-size-header: 100%;
+$about-sm-col-size-content: 100%;
+
+$about-md-col-size-header: 2 of 7;
+$about-md-col-size-content: 5 of 7;
+
+$about-padding-top: rem-calc(8);
+$about-padding-bottom: rem-calc(34);
 
 #about {
-    @include grid-row($about-row-size);
+    @include grid-row();
+    padding-top: $about-padding-top;
+    padding-bottom: $about-padding-bottom;
 
     > header {
+
         @include grid-column($about-sm-col-size-header);
         @include breakpoint(medium){
             @include grid-column-size($about-md-col-size-header);

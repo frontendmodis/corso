@@ -3,18 +3,20 @@
 
 $global-width: rem-calc(960);
 $global-lineheight: 1.5;
+$lighter-gray: #f2f2f2;
+$light-gray: #cfcfcf;
+$medium-gray: #999999;
+$dark-gray: #666666;
+$black: #333333;
+$white: #ffffff;
+
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
+  primary: $medium-gray,
+  secondary: $dark-gray,
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'knockout-light', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -33,26 +35,18 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large);
 
 // 3. The Grid
 // -----------
-
-$grid-row-width: $global-width;
-$grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
-  medium: 30px,
+  medium: 20px,
 );
-$grid-column-align-edge: true;
-$block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
-$header-font-style: normal;
 $header-sizes: (
   small: (
     'h1': 24,
@@ -72,10 +66,10 @@ $header-sizes: (
   ),
 );
 $header-color: inherit;
-$header-lineheight: 1.4;
+$header-lineheight: 1;
 $header-margin-bottom: 0.5rem;
-$header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
-$paragraph-margin-bottom: 1rem;
+$paragraph-lineheight: 1.4;
+$paragraph-margin-bottom: 0;
+$anchor-text-decoration: underline;
 
 
