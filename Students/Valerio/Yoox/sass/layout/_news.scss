@@ -40,7 +40,7 @@ $news-backgroud: $lighter-gray;
                 @include grid-column-size($news-md-col-size-header);
                 }
             }
-        > section {
+        > div {
             @include grid-column($news-sm-col-size-content);
             @include breakpoint(medium){
                 @include grid-column-size($news-md-col-size-content);
