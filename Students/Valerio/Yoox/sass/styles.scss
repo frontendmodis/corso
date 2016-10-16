@@ -2,11 +2,13 @@
 @import 'util/util';
 @import "foundation/settings";
 @import 'foundation';
-@include foundation-global-styles; 
+@include foundation-global-styles;
+@include foundation-typography;
 
 //================== Scss ====================
 @import "layout/main";
 @import "typography";
+
 
 
 
