@@ -3,6 +3,7 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>Ciao mondo</h1>
@@ -15,62 +16,52 @@
     <input type="text" id="clienteNome"/>
     <input type="text" id="clienteCognome" />
     <input type="button" id="crea" value="Crea" />
-<script>
-    (function () {
-        "use strict";
 
-        var button = document.getElementById('myButton');
-        button.addEventListener("click", mostraCliente);
+<script>
+    $(function () {
+        "use strict";
+        
+        $('#myButton').click(mostraCliente);
 
         function mostraCliente(e) {
-            var id = document.getElementById('clienteId').value;
+            var id = $('#clienteId').val();
 
-            var xh = new XMLHttpRequest();
-            xh.addEventListener('readystatechange', onReadyStateChanged);
-
-            xh.overrideMimeType('text/xml');
-
-            xh.open("GET", "/api/clienti/" + id, true);
-            xh.setRequestHeader("Accept", "text/xml");
-
-            xh.send();
+            $.getJSON("/api/clienti/" + id, null, function (cliente) {
+                $("#cliente").html(cliente.Nome + " " + cliente.Cognome);
+            });
         }
 
-        function onReadyStateChanged() {
-            if (this.readyState === 4 && this.status === 200) {
-                //var cliente = JSON.parse(this.responseText);
+        //$('#myButton').click(function (e) {
+        //    $.getJSON("/api/clienti/" + $('#clienteId').val(), null,
+        //        function (cliente) {
+        //            $("#cliente").html(cliente.Nome + " " + cliente.Cognome);
+        //    });
+        //});
 
-                //var h2 = document.getElementById("cliente");
-                //h2.innerHTML = cliente.Nome + " " + cliente.Cognome;
-
-                var nome = this.responseXML.getElementsByTagName("Nome")[0].childNodes[0];
-                var cognome = this.responseXML.getElementsByTagName("Cognome")[0].childNodes[0];
-
-                var h2 = document.getElementById("cliente");
-                h2.innerHTML = nome.nodeValue + " " + cognome.nodeValue;
-            }
-        }
-
-        button = document.getElementById('crea');
-        button.addEventListener("click", creaCliente);
+        $('#crea').click(creaCliente);
 
         function creaCliente(e) {
-            var nome = document.getElementById('clienteNome').value;
-            var cognome = document.getElementById('clienteCognome').value;
+            var nome = $('#clienteNome').val();
+            var cognome = $('#clienteCognome').val();
 
-            var xh = new XMLHttpRequest();
-            xh.addEventListener('readystatechange', xhChanged);
-            xh.open('POST', "/api/clienti", true);
-            xh.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-            xh.send(JSON.stringify({ Nome: nome, Cognome: cognome }));
+            $.post("/api/clienti", { Nome: nome, Cognome: cognome }, function (resp) {
+                console.log(resp);
+            });
         }
 
-        function xhChanged() {
-            if (this.readyState === 4 && this.status === 201) {
-                alert(this.responseText);
-            }
-        }
-    })();
+
+        //$('#crea').click(function (e) {
+        //    $.post("/api/clienti", { 
+        //        Nome: $('#clienteNome').val(), 
+        //        Cognome: $('#clienteCognome').val() 
+        //    }, function (resp) {
+        //        console.log(resp);
+        //    });
+        //});
+
+
+
+    });
 </script>
 </body>
 </html>
