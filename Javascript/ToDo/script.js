@@ -1,120 +1,75 @@
 (function(){
-"use strict";
+    "use strict";
 
-init();
+    var app = angular.module('todoApp', ['filearts.dragDrop']);
 
-function init(){
-    load();
+    app.controller('InputController', InputController);
+    app.controller('ListaController', ListaController);
 
-    var myForm = document.getElementById('myForm');
-    myForm.addEventListener('submit', myFormSubmitted);
+    InputController.$inject = ['$rootScope'];
 
-    var myReset = document.getElementById('myReset');
-    myReset.addEventListener('click', myResetClicked);
-    
-}
+    function InputController($rootScope){
+        var vm = this;
+        vm.testo = '';
+        vm.aggiungi = aggiungi;
+        vm.reset = reset;
 
-function myFormSubmitted(e){
-    e.preventDefault();
+        function aggiungi(){
+            var todo = ToDoFactory(vm.testo, false);
+            $rootScope.$broadcast('nuovoTodo', todo);
+            vm.testo = '';
+        }
 
-    var input = document.getElementById('todo');
-    var li = document.createElement('li');
-    li.innerHTML = input.value;
-    li.setAttribute('draggable', 'true');
-    addLiListener(li);  
-
-    var myList = document.getElementById('myList');
-    myList.appendChild(li);
-    save();
-
-    input.value = '';
-}
-
-function myResetClicked(e){
-    var fatti = document.getElementsByClassName('done');
-    var myList = document.getElementById('myList');
-
-    for(var i = fatti.length - 1; i >= 0; i--){
-        myList.removeChild(fatti[i]);
-    } 
-    save();
-}
-
-function liClicked(){
-    if(this.className == 'done'){
-        this.className = '';
-    } else {
-        this.className = 'done';
+        function reset(){
+            $rootScope.$broadcast('richiestoReset');
+        }
     }
-    save();
-}
 
-function save(){
-    var myList = document.getElementById('myList');
-    localStorage.setItem('todo', myList.innerHTML);
-}
+    ListaController.$inject = ['$rootScope', '$filter', '$window'];
 
-function load(){
-    var todos = localStorage.getItem('todo');
-    var myList = document.getElementById('myList');
-    myList.innerHTML = todos;
+    function ListaController($rootScope, $filter, $window){
+        var vm = this;
+        vm.todoes = [];
+        vm.toggle = toggle;
 
-    var listItem = myList.childNodes;
-    for(var i = 0; i < listItem.length; i++){
-            addLiListener(listItem[i]);                     
+        $rootScope.$on('nuovoTodo', nuovoTodo);
+        $rootScope.$on('richiestoReset', richiestoReset);
+
+        load();
+
+        function toggle(todo){
+            todo.done = !todo.done;
+            save();    
+        }
+
+        function nuovoTodo(e, todo){
+            vm.todoes.push(todo);
+            save();
+        }
+
+        function richiestoReset(){
+            vm.todoes = $filter('filter')(vm.todoes, { done: false });
+            save();
+        }        
+
+        function load() {
+            var todoes = $window.localStorage.getItem('todoes');
+
+            if(todoes){
+                vm.todoes = JSON.parse(todoes);
+            }
+        }
+
+        function save() {
+            $window.localStorage.setItem('todoes', JSON.stringify(vm.todoes));
+        }
     }
-}
 
-function addLiListener(li){
-    li.addEventListener('click', liClicked);
-    li.addEventListener('dragstart', drag);
-    li.addEventListener('drop', drop);
-    li.addEventListener('dragover', dragOver);                                     
-}            
-
-function getLiArray()
-{
-    var nodeList = [];
-    var nodeCollection = document.getElementsByTagName('li');
-    var length = nodeCollection.length;
-    var i;
-
-    for(i = 0; i < length; i++){
-        nodeList.push(nodeCollection[i]);
+    function ToDoFactory(testo, done){
+        return {
+            testo: testo,
+            done: done
+        };
     }
-    
-    return nodeList;
-
-    // Oppure più brevemente ma meno chiaramente:
-    //return Array.prototype.slice.call(document.getElementsByTagName('li'));
-}
-
-function drag(e){
-    var nodeList = getLiArray();
-    var index = nodeList.indexOf(e.target);        
-    e.dataTransfer.setData("text/plain", index);
-}
-
-function drop(e){
-    e.preventDefault();
-    var nodeList = getLiArray();                
-    var ixO = parseInt(e.dataTransfer.getData("text"));
-    var origin = nodeList[ixO];
-    var destination = e.target;
-
-    var destinationContent = destination.innerHTML;
-    var destinationClass = destination.className;
-
-    destination.innerHTML = origin.innerHTML;
-    destination.className = origin.className;
-    origin.innerHTML = destinationContent;
-    origin.className = destinationClass;
-    
-    save();
-}
-
-function dragOver(e){
-    e.preventDefault();
-}
 
 })();

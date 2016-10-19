@@ -7,20 +7,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
 
 <body>
-    <main>
-        <header>
+    <main data-ng-app="todoApp">
+        <header data-ng-controller="InputController as vm">
             <h1>La mia ToDo List</h1>
 
-            <form id="myForm">
+            <form id="myForm" data-ng-submit="vm.aggiungi()">
                 <fieldset>
                     <legend class="hide">Nuovo ToDo</legend>                
                     <label for="todo" class="hide">ToDo</label>
-                    <input id="todo" type="text" />
+                    <input id="todo" type="text" data-ng-model="vm.testo" />
                 </fieldset>
                 <button type="submit">
                 <svg id="svgPlus" viewBox="0 0 48 48">
@@ -29,7 +28,7 @@
                 </g>
                 </svg>
                 </button> 
-                <button type="button" id="myReset">
+                <button type="button" id="myReset" data-ng-click="vm.reset()">
                     <svg id="svgTrash" viewBox="0 0 48 48">
                     <g>
                         <path id="path1" transform="rotate(0,24,24) translate(6.00001502035795,0) scale(1.4999987483035,1.4999987483035)  " fill="#000000" d="M16,8.0000272L18,8.0000272 18,27.000028 16,27.000028z M11,8.0000272L13,8.0000272 13,27.000028 11,27.000028z M6.0000005,8.0000272L8.0000005,8.0000272 8.0000005,27.000028 6.0000005,27.000028z M2.9990063,5.0000274L2.9990063,30.000026 20.999983,30.000026 20.999006,5.0000274z M13.771989,1.9959999L10.198989,2.0000001C10.158989,2.025,9.9989892,2.241,9.9989892,2.6000001L9.9989892,3.0000258 13.998989,3.0000258 13.998989,2.6000001C13.998989,2.241,13.838988,2.025,13.771989,1.9959999z M10.198989,0L13.798988,0C15.031989,0,15.998989,1.142,15.998989,2.6000001L15.998989,3.0000258 22.999006,3.0000258 24,3.0000272 24,5.0000274 22.999006,5.0000274 22.999006,30.000026C22.999006,31.102992,22.102034,32.000026,20.999006,32.000026L2.9990063,32.000026C1.895979,32.000026,0.99900633,31.102992,0.9990066,30.000026L0.9990066,5.0000274 0,5.0000274 0,3.0000272 0.9990066,3.0000272 7.9989887,3.0000258 7.9989887,2.6000001C7.9989887,1.142,8.9659887,0,10.198989,0z" />
@@ -39,11 +38,11 @@
             </form>            
         </header>        
         
-        <ul id="myList">
-            <li>Comprare l'acqua</li>
-            <li>Comprare rughetta</li>
-            <li>Comprare salsiccia</li>
-            <li class="done">Andare al corso</li>
+        <ul id="myList" data-ng-controller="ListaController as vm">
+            <li data-ng-click="vm.toggle(todo)"
+                data-ng-repeat="todo in vm.todoes"
+                data-ng-class="{ done: todo.done }"
+                drag-container="todo">{{todo.testo}}</li>
         </ul>
 
        

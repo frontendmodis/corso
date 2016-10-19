@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function(){
+            "use strict";
+
+            // Oggetto = Istanza di una classe
+
+            // Metodo 1
+            var filippo = {
+                nome: 'Filippo',
+                cognome: 'Nardi',
+                nomeCompleto: function(){
+                    return this.nome + ' ' + this.cognome;
+                }
+            };
+
+            var giovanni = {
+                nome: 'Giovanni',
+                cognome: 'Falbo',
+                nomeCompleto: function(){
+                    return this.nome + ' ' + this.cognome;
+                }
+            };
+
+            console.log(filippo.nomeCompleto());
+            console.log(giovanni.nomeCompleto());
+
+            // Metodo 1a
+            function PersonaFactory(nome, cognome){
+                return {
+                    nome: nome,
+                    cognome: cognome,
+                    nomeCompleto: nomeCompleto
+                }
+
+                function nomeCompleto(){
+                        return this.nome + ' ' + this.cognome;
+                }
+            }
+
+            var francesco = PersonaFactory('Francesco', 'Valli');
+            console.log(francesco.nomeCompleto());
+
+            // Metodo 2
+            // Classe
+            function Persona(nome, cognome){
+                this.nome = nome;
+                this.cognome = cognome;
+                this.nomeCompleto = function(){
+                    return this.nome + ' ' + this.cognome;
+                }
+            }
+
+            // Oggetti
+            var rosario = new Persona('Rosario', 'Simeti');
+            var silvia = new Persona('Silvia', 'Villani');
+
+            console.log(rosario.nomeCompleto());
+            console.log(silvia.nomeCompleto());
+
+            // Metodo 2a
+            function Person(nome, cognome){
+                this.nome = nome;
+                this.cognome = cognome;                
+            }
+
+            Person.prototype.nomeCompleto = function(){
+                return this.nome + ' ' + this.cognome;
+            }
+
+            var marco = new Person('Marco', 'Pagano');
+
+            console.log(marco.nomeCompleto());
+        })();
+    </script>
+</body>
+</html>
