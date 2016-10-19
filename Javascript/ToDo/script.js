@@ -1,83 +1,75 @@
-$(function(){
-"use strict";
+(function(){
+    "use strict";
 
-init();
+    var app = angular.module('todoApp', ['filearts.dragDrop']);
 
-function init(){
-    load();
+    app.controller('InputController', InputController);
+    app.controller('ListaController', ListaController);
 
-    $('#myForm').submit(myFormSubmitted);
-    $('#myReset').click(function(e){    
-        $('.done').remove();
-    });
+    InputController.$inject = ['$rootScope'];
 
-    if (Modernizr.mutationobserver) {
-        MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-        var obs = new MutationObserver(function(mutation, observer){
-            localStorage.setItem('todo', $('#myList').html());
-        });
+    function InputController($rootScope){
+        var vm = this;
+        vm.testo = '';
+        vm.aggiungi = aggiungi;
+        vm.reset = reset;
 
-        obs.observe($('#myList')[0], {
-            subtree: true,
-            attributes: true,
-            childList: true
-        });
-    } else {
-        $.getScript('mutationevents.js');
-    }
-}
-
-function myFormSubmitted(e){
-    e.preventDefault();
-
-    var $input = $('#todo');
-    var $li = $('<li></li>')
-        .attr('draggable', 'true')
-        .html($input.val());
-
-    addLiListener($li);  
-
-    $('#myList').append($li);
-
-    $input.val('');
-}
-
-function load(){    
-    var todos = localStorage.getItem('todo');
-    $('#myList').html(todos);
-    $('#myList').children().each(function(i, li){
-        addLiListener($(li));
-    });
-}
-
-function addLiListener($li){
-    $li.on({
-        'click': function(){
-            $(this).toggleClass('done');
-       },
-        'dragstart': function(e){
-            var index = $('li').index(e.target);        
-            e.originalEvent.dataTransfer.setData("text/plain", index);
-        },
-        'drop': drop,
-        'dragover': function(e){
-            e.preventDefault();
+        function aggiungi(){
+            var todo = ToDoFactory(vm.testo, false);
+            $rootScope.$broadcast('nuovoTodo', todo);
+            vm.testo = '';
         }
-    });
-}            
 
-function drop(e){
-    e.preventDefault();
-    var ixO = parseInt(e.originalEvent.dataTransfer.getData("text"));
-    var $origin = $('li').eq(ixO);
-    var destination = e.target;
+        function reset(){
+            $rootScope.$broadcast('richiestoReset');
+        }
+    }
 
-    var destinationContent = destination.innerHTML;
-    var destinationClass = destination.className;
+    ListaController.$inject = ['$rootScope', '$filter', '$window'];
 
-    destination.innerHTML = $origin.html();
-    destination.className = $origin.attr('class');
-    $origin.html(destinationContent);
-    $origin.attr('class', destinationClass);    
-}
-});
+    function ListaController($rootScope, $filter, $window){
+        var vm = this;
+        vm.todoes = [];
+        vm.toggle = toggle;
+
+        $rootScope.$on('nuovoTodo', nuovoTodo);
+        $rootScope.$on('richiestoReset', richiestoReset);
+
+        load();
+
+        function toggle(todo){
+            todo.done = !todo.done;
+            save();    
+        }
+
+        function nuovoTodo(e, todo){
+            vm.todoes.push(todo);
+            save();
+        }
+
+        function richiestoReset(){
+            vm.todoes = $filter('filter')(vm.todoes, { done: false });
+            save();
+        }        
+
+        function load() {
+            var todoes = $window.localStorage.getItem('todoes');
+
+            if(todoes){
+                vm.todoes = JSON.parse(todoes);
+            }
+        }
+
+        function save() {
+            $window.localStorage.setItem('todoes', JSON.stringify(vm.todoes));
+        }
+    }
+
+    function ToDoFactory(testo, done){
+        return {
+            testo: testo,
+            done: done
+        };
+    }
+
+})();
