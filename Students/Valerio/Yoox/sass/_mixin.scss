@@ -1,0 +1,17 @@
+@mixin retina-display{
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) { 
+        @content;
+    }
+}
+
+@mixin button-icon($image-url, $width, $height, $margin, $align: right) {
+    background-image: url($image-url);
+    background-repeat: no-repeat;
+    background-size: $width $height;
+    background-position: $align $margin center;
+    padding-#{$align}: $width + ( $margin * 2 );
+}
+
+@mixin button-icon-url($image-url) {
+    background-image: url($image-url);
+}

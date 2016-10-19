@@ -1,32 +1,66 @@
+
+@import '../mixin';
+
 $tabs-sm-col-size-header: 100%;
 $tabs-sm-col-size-content: 100%;
 
 $tabs-md-col-size-header: 2 of 7;
 $tabs-md-col-size-content: 5 of 7;
 
+$tab-height: rem-calc(54);
+$tab-padding: 0 rem-calc(10);
+
+$tab-background: $lighter-gray;
+$tab-background-active: $white;
+$tab-border: 1px solid $light-gray;
+
+$tab-icon-url: "../assets/images/1x/arrow_right.png";
+$tab-icon-url-2x: "../assets/images/2x/arrow_right.png";
+$tab-icon-width: rem-calc(12);
+$tab-icon-height: rem-calc(26);
+$tab-icon-margin: rem-calc(12);
+
 #tabs {
     @include grid-row();
     } /* end #tabs */
-
-    #tab-navigation  {
-        background: yellow;
-        
-        
-        > ul {
-            margin: 0 rem-calc(10);
-            list-style-type: none;
-            background: red;
-            }
-
-        @include grid-column($tabs-sm-col-size-header,0);
-        @include breakpoint(medium){
-            @include grid-column-size($tabs-md-col-size-header);
-            }
-        }
-
+    
     #tab-content {
         @include grid-column($tabs-sm-col-size-content);
         @include breakpoint(medium){
             @include grid-column-size($tabs-md-col-size-content);
             }
         }
+
+    #tab-navigation  {
+        @include grid-column($tabs-sm-col-size-header,0);
+        @include breakpoint(medium){
+            @include grid-column-size($tabs-md-col-size-header);
+            }
+
+        > ul {
+            margin: 0;
+            list-style-type: none;
+            }
+            a {
+                @include button-icon($tab-icon-url, $tab-icon-width, $tab-icon-height, $tab-icon-margin);
+                @include retina-display {
+                    @include button-icon-url($tab-icon-url-2x);
+                    }
+                text-decoration: none;
+                color: $black;
+                display:inline-block;
+                width:100%;
+                padding: $tab-padding;
+                line-height: $tab-height;
+                background-color: $tab-background;
+                border-top: $tab-border;
+                &:last-child {
+                    border-bottom: $tab-border;
+                    }
+                &.tab-active {
+                    background-color: $tab-background-active;
+                    }
+                }
+        }
+
+
