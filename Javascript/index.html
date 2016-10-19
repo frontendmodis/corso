@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body>
+    <!--<div data-ng-app data-ng-init="nome = 'Gabriele'">
+        <input type="text" data-ng-model="nome" />
+        <p>
+            Ciao {{nome}}
+        </p>
+    </div>-->
+    <div data-ng-app="myApp">
+        <div data-ng-controller="myController as vm">
+            <div><label>Nome</label><input type="text" data-ng-model="vm.persona.nome"></div>
+            <div><label>Cognome</label><input type="text" data-ng-model="vm.persona.cognome"></div>
+            Ciao {{vm.persona.nomeCompleto()}}
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            "use strict";
+
+            var app = angular.module('myApp', []);
+            /*app.controller('myController', function($scope){
+                $scope.persona = {
+                    nome: 'Gabriele',
+                    cognome: 'Gaggi',
+                    nomeCompleto: function(){
+                        return this.nome + ' ' + this.cognome;
+                    }
+                };
+            });*/
+
+
+            app.controller('myController', myController);
+
+            /*
+            myController.$inject = ['$scope'];           
+
+            function myController($scope){
+                $scope.persona = {
+                    nome: 'Gabriele',
+                    cognome: 'Gaggi',
+                    nomeCompleto: function(){
+                        return this.nome + ' ' + this.cognome;
+                    }
+                };
+            } 
+            */
+
+            /*
+            function MioOggetto(nome, cognome){
+                this.nome = nome;
+                this.cognome = cognome;
+                this.nomeCompleto = function(){
+                    return this.nome + ' ' + this.cognome;
+                }
+            }
+
+            var persona = new MioOggetto('Gabriele', 'Gaggi');
+            console.log(persona.nomeCompleto());
+            */
+
+            myController.$inject = ['$filter'];
+
+            function myController($filter){
+                var vm = this;                
+                vm.persona = {
+                    nome: 'Gabriele',
+                    cognome: 'Gaggi',
+                    nomeCompleto: function(){
+                        var uppercase = $filter('uppercase');
+                        return uppercase(this.nome + ' ' + this.cognome);
+                    }
+                };      
+                                   
+            }
+        })();
+    </script>
+</body>
+</html>

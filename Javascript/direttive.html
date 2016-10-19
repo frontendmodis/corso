@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <style>
+        .maschio {
+            background-color:lightblue;
+        }
+
+        .femmina {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div data-ng-app="myApp">
+        <div data-ng-controller="myController as vm">
+            <div><label>Nome</label><input type="text" data-ng-model="vm.persona.nome"></div>
+            <div><label>Cognome</label><input type="text" data-ng-model="vm.persona.cognome"></div>
+            <p
+            data-ng-click="vm.clicca()" 
+            data-ng-class="{ maschio: vm.persona.sesso == 'M', femmina: vm.persona.sesso == 'F'}">
+                Ciao {{vm.persona.nomeCompleto()}}
+            </p>
+            <p data-ng-if="vm.persona.cognome == 'Gaggi'">
+                Come stai oggi {{vm.persona.nomeCompleto()}}?
+            </p>
+            <label>
+                <span>Mostra data</span>
+                <input type="checkbox" data-ng-model="vm.showData" />
+            </label>
+            <p data-ng-show="vm.showData">
+                {{vm.data}}
+            </p>            
+            <label>
+                <span>Maschio</span>
+                <input type="radio" name="sesso" value="M" data-ng-model="vm.persona.sesso"/>
+            </label>
+            <label>
+                <span>Femmina</span>
+                <input type="radio" name="sesso" value="F" data-ng-model="vm.persona.sesso"/>
+            </label>    
+            <br/>
+
+            <!--<select data-ng-model="vm.persona.hobbies" size="4" multiple>
+                <option data-ng-repeat="h in vm.hobbies">{{h.nome}}</option>
+            </select>-->
+
+            <select size="4" multiple 
+                    data-ng-model="vm.persona.hobbies" 
+                    data-ng-options="h.nome for h in vm.hobbies">
+            </select>
+
+            <p>
+                {{vm.persona.hobbies}}
+            </p>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            "use strict";
+
+            var app = angular.module('myApp', []);
+            app.controller('myController', myController);
+            myController.$inject = ['$filter'];
+
+            function myController($filter){
+                var vm = this;                
+                vm.persona = {
+                    nome: 'Gabriele',
+                    cognome: 'Gaggi',
+                    sesso:'',
+                    hobbies:[],
+                    nomeCompleto: function(){
+                        var uppercase = $filter('uppercase');
+                        return uppercase(this.nome + ' ' + this.cognome);
+                    }
+                };     
+                vm.showData = false; 
+                vm.data = new Date().toJSON().slice(0,10);    
+                vm.hobbies = [
+                    { id: 1, nome:'Falegnameria' },
+                    { id: 2, nome:'Giardinaggio' },
+                    { id: 3, nome:'Bocce' },
+                    { id: 4, nome:'Andiamo a comandare' }
+                ];
+
+                vm.clicca = function(){
+                    vm.persona.nome = 'Dunquemente';
+                }           
+            }
+        })();
+    </script>
+</body>
+</html>
