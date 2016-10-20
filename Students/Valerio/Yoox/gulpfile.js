@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var connect = require('gulp-connect');
+var webserver = require('gulp-webserver');
 
 gulp.task('connect', function() {
     connect.server({
@@ -15,14 +15,16 @@ gulp.task('sass', function (){
         .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('livereload', function() {
-    gulp.src('./public/**/*')
-        .pipe(connect.reload());
+gulp.task('webserver', function() {
+  gulp.src('./public/')
+    .pipe(webserver({
+      livereload: true,
+      open: true
+    }));
 });
 
 gulp.task('watch', function (){
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./public/**/*', ['livereload']);
 });
 
-gulp.task('default', ['connect', 'watch', 'sass']);
+gulp.task('default', ['webserver', 'watch', 'sass']);
