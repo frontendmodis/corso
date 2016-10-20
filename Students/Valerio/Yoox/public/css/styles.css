@@ -921,6 +921,13 @@ main {
   #tab-navigation > ul {
     margin: 0;
     list-style-type: none; }
+  #tab-navigation li {
+    background-color: #f2f2f2;
+    border-top: 1px solid #cfcfcf; }
+    #tab-navigation li:last-child {
+      border-bottom: 1px solid #cfcfcf; }
+    #tab-navigation li.tab-active {
+      background-color: #ffffff; }
   #tab-navigation a {
     background-image: url("../assets/images/1x/arrow_right.png");
     background-repeat: no-repeat;
@@ -932,16 +939,10 @@ main {
     display: inline-block;
     width: 100%;
     padding: 0 0.625rem;
-    line-height: 3.375rem;
-    background-color: #f2f2f2;
-    border-top: 1px solid #cfcfcf; }
+    line-height: 3.375rem; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
       #tab-navigation a {
         background-image: url("../assets/images/2x/arrow_right.png"); } }
-    #tab-navigation a:last-child {
-      border-bottom: 1px solid #cfcfcf; }
-    #tab-navigation a.tab-active {
-      background-color: #ffffff; }
 
 h1, h2, h3 {
   font-family: 'knockout-regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; }
